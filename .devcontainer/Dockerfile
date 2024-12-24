@@ -7,6 +7,7 @@ FROM nvcr.io/nvidia/cuda:12.1.1-devel-ubuntu22.04
 ENV DEBIAN_FRONTEND=noninteractive
 LABEL maintainer="a5chin <a5chin.origin+contact@gmain.com>"
 
+# hadolint ignore=DL3008
 RUN set -eux; \
     apt-get update; \
     apt-get install -y --no-install-recommends \
@@ -14,8 +15,8 @@ RUN set -eux; \
     curl \
     gnupg \
     netbase \
-    sq \
     wget \
+    tzdata \
     ; \
     rm -rf /var/lib/apt/lists/*
 
