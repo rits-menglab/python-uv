@@ -3,7 +3,9 @@
     //GPUを搭載していないマシンで実行する際はコメントアウトしてください
     "runArgs": [
         "--gpus",
-        "all"
+        "all",
+        "--shm-size",
+        "64gb"
     ],
     "build": {
         "context": "..",
