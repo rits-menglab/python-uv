@@ -1,12 +1,23 @@
 ARG UV_VERSION=0.5.11
-ARG DEBIAN_VERSION=bookworm
-
 
 FROM ghcr.io/astral-sh/uv:$UV_VERSION AS uv
 
 
-FROM mcr.microsoft.com/vscode/devcontainers/base:$DEBIAN_VERSION
+FROM nvcr.io/nvidia/cuda:12.1.1-devel-ubuntu22.04
+ENV DEBIAN_FRONTEND=noninteractive
 LABEL maintainer="a5chin <a5chin.origin+contact@gmain.com>"
+
+RUN set -eux; \
+    apt-get update; \
+    apt-get install -y --no-install-recommends \
+    ca-certificates \
+    curl \
+    gnupg \
+    netbase \
+    sq \
+    wget \
+    ; \
+    rm -rf /var/lib/apt/lists/*
 
 # hadolint ignore=DL3008
 RUN apt-get update \

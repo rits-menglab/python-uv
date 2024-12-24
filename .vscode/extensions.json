@@ -17,5 +17,9 @@
         "tamasfe.even-better-toml",
         "usernamehw.errorlens",
         "yzhang.markdown-all-in-one",
+        "elazarcoh.simply-view-image-for-python-debugging",
+        "bierner.markdown-preview-github-styles",
+        "yahyabatulu.vscode-markdown-alert",
+        "sohamkamani.code-eol",
     ]
 }
