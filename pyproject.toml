@@ -16,6 +16,8 @@ dependencies = [
     "pydantic>=2.10.4",
     "torch>=2.5.1",
     "torchvision>=0.20.1",
+    "matplotlib>=3.9.4",
+    "torcheval>=0.0.7",
 ]
 
 [tool.uv]
