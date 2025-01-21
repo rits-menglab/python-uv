@@ -11,7 +11,7 @@
         "context": "..",
         "dockerfile": "Dockerfile",
         "args": {
-            "UV_VERSION": "0.5.11"
+            "UV_VERSION": "0.5.13"
         }
     },
     "features": {
