@@ -1,7 +1,5 @@
-ARG UV_VERSION=0.5.13
-
+ARG UV_VERSION=latest
 FROM ghcr.io/astral-sh/uv:$UV_VERSION AS uv
-
 
 FROM nvcr.io/nvidia/cuda:12.1.1-devel-ubuntu22.04
 ENV DEBIAN_FRONTEND=noninteractive
