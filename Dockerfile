@@ -1,6 +1,6 @@
 ARG DEBIAN_VERSION=bookworm
 ARG UV_VERSION=latest
-ARG VARIANT=3.13
+ARG VARIANT=3.12
 
 
 FROM ghcr.io/astral-sh/uv:$UV_VERSION AS uv
