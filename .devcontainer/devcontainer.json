@@ -1,15 +1,29 @@
 {
     "name": "uv",
+    "runArgs": [
+        "--gpus",
+        "all"
+    ],
     "build": {
         "context": "..",
         "dockerfile": "Dockerfile",
         "args": {
-            "UV_VERSION": "latest",
-            "DEBIAN_VERSION": "bookworm"
+            "UV_VERSION": "latest"
         }
     },
     "features": {
-        "ghcr.io/dhoeric/features/hadolint:1": {}
+        "ghcr.io/dhoeric/features/hadolint:1": {},
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": "true",
+            "username": "vscode",
+            "userUid": "1000",
+            "userGid": "1000",
+            "upgradePackages": "true"
+        },
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": "true"
+        }
     },
     "customizations": {
         "vscode": {

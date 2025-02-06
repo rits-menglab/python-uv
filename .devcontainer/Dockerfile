@@ -1,11 +1,10 @@
 ARG UV_VERSION=latest
-ARG DEBIAN_VERSION=bookworm
 
 
 FROM ghcr.io/astral-sh/uv:$UV_VERSION AS uv
 
 
-FROM mcr.microsoft.com/vscode/devcontainers/base:$DEBIAN_VERSION
+FROM nvcr.io/nvidia/cuda:12.4.1-devel-ubuntu22.04
 LABEL maintainer="a5chin <a5chin.origin+contact@gmain.com>"
 
 # hadolint ignore=DL3008
