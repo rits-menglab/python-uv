@@ -49,7 +49,13 @@
         "UV_LINK_MODE": "copy",
         "UV_PROJECT_ENVIRONMENT": "/home/vscode/.venv"
     },
-    "postCreateCommand": "uv sync --frozen",
+    "mounts": [
+        "source=/${localEnv:HOME}/.cache/uv,target=/home/vscode/.cache/uv,type=bind,consistency=cached"
+    ],
+    "postCreateCommand": {
+        "Fix Volume Permissions": "sudo chown -R $(whoami): /home/vscode/.cache",
+        "UV Sync": "uv sync --frozen"
+    },
     "postStartCommand": "uv run pre-commit install",
     "remoteUser": "vscode"
 }
